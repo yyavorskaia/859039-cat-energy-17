@@ -3,35 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи - Каталог продукции</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="catalog">
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Кэт энерджи">
-        <img class="page-header__logo-title" src="http://placehold.it/150x100" alt="Кэт энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Выбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-title" src="img/logo-mobile.svg" alt="Кэт энерджи" width="190" height="40">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a class="site-list__link site-list__link--active" >Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
       <section class="catalog">
-        <h1>Каталог продукции</h1>
+        <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -41,7 +43,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 500 г курица">
+                <img src="img/chicken-small-mobile@1x.jpg" alt="Кэт Энерджи Про 500 г курица" class="product__picture">
               </p>
             </a>
             <table class="product__details">
@@ -58,7 +60,7 @@
                 <td>700 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -68,7 +70,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 1000 г курица">
+                <img src="img/chicken-big-mobile@1x.jpg" alt="Кэт Энерджи Про 1000 г курица">
               </p>
             </a>
             <table class="product__details">
@@ -85,7 +87,7 @@
                   <td>1000 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -95,7 +97,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 500 г рыба">
+                <img src="img/fish-small-mobile@1x.jpg" alt="Кэт Энерджи Про 500 г рыба">
               </p>
             </a>
             <table class="product__details">
@@ -112,7 +114,7 @@
                 <td>700 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -122,7 +124,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 1000 г рыба">
+                <img src="img/fish-big-mobile@1x.jpg" alt="Кэт Энерджи Про 1000 г рыба">
               </p>
             </a>
             <table class="product__details">
@@ -139,7 +141,7 @@
                 <td>1000 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -149,7 +151,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 500 г гречка">
+                <img src="img/buckwheat-small-mobile@1x.jpg" alt="Кэт Энерджи Про 500 г гречка">
               </p>
             </a>
             <table class="product__details">
@@ -166,7 +168,7 @@
                 <td>400 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -176,7 +178,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 1000 г гречка">
+                <img src="img/buckwheat-big-mobile@1x.jpg" alt="Кэт Энерджи Про 1000 г гречка">
               </p>
             </a>
             <table class="product__details">
@@ -193,7 +195,7 @@
                 <td>700 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <a href="catalog-item.html">
@@ -203,7 +205,7 @@
             </a>
             <a href="catalog-item.html">
               <p class="product__image">
-                <img src="http://placehold.it/150x100" alt="Кэт Энерджи Про 500 г рис">
+                <img src="img/rice-small-mobile@1x.jpg" alt="Кэт Энерджи Про 500 г рис">
               </p>
             </a>
             <table class="product__details">
@@ -220,13 +222,13 @@
                 <td>500 Р.</td>
               </tr>
             </table>
-            <a class="product_btn" href="#">Заказать</a>
+            <a class="product_btn btn" href="#">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__icon"></div>
             <h3 class="product__amount">Показать еще 100500 товаров</h3>
             <span class="product__taste">На самом деле вкусов гораздо больше!</span>
-            <a class="product_btn" href="catalog-item.html">Показать все</a>
+            <a class="product_button btn" href="catalog-item.html">Показать все</a>
           </li>
         </ul>
       </section>
@@ -235,7 +237,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
-          <img class="page-footer__logo-title" src="http://placehold.it/150x100" alt="Кэт энерджи">
+          <img class="page-footer__logo-title" src="img/logo-footer.svg" alt="Кэт энерджи" width="130" height="25">
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -254,7 +256,7 @@
           <h2 class="visually-hidden">Правообладатель</h2>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
-            <img class="page-footer__logo" src="http://placehold.it/150x100" alt="HTML Academy">
+            <img class="page-footer__logo" src="img/htmlacademy.svg" alt="HTML Academy">
           </a>
         </div>
       </div>
