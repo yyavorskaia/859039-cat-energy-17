@@ -1,3 +1,40 @@
 .page-header__wrapper {
-  padding: 10px 20px 20px 15px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  width: 190px;
+  height: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 708px;
+    padding: 0 30px;
+
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .page-header__logo {
+    width: 180px;
+    height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1220px;
+    padding: 0 110px;
+  }
+
+  .page-header__logo {
+    width: 210px;
+    height: 70px;
+  }
 }
