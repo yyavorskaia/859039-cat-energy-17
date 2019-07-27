@@ -1,11 +1,14 @@
 .intro {
+  position: relative;
+
   width: 280px;
+  min-height: 596px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0 20px;
 
   background-color: #65a93c;
-  background-image: url("img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -59,5 +62,14 @@
   .intro {
     width: 1220px;
     padding: 0 40px;
+  }
+
+  .intro_img {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    top: 10%;
+    right: 20%;
+    z-index: 2;
   }
 }
