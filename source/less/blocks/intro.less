@@ -1,15 +1,20 @@
 .intro {
-  margin-bottom: 20px;
-}
+  position: relative;
 
-.intro__wrapper {
-  padding: 25px 35px 165px 35px;
-  color: #ffffff;
+  width: 280px;
+  min-height: 596px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 20px;
 
   background-color: #65a93c;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.intro__text {
+  color: #ffffff;
 }
 
 .intro__title {
@@ -36,5 +41,35 @@
   &:hover,
   &:focus {
     background-color: #5eaa2f;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    width: 708px;
+    padding: 0 30px;
+
+    background-color: #ffffff;
+    background-image: none;
+  }
+
+  .intro__text {
+    color: #111111;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    width: 1220px;
+    padding: 0 40px;
+  }
+
+  .intro_img {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    top: 10%;
+    right: 20%;
+    z-index: 2;
   }
 }
