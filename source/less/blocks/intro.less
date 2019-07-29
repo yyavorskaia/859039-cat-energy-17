@@ -2,10 +2,9 @@
   position: relative;
 
   width: 280px;
-  min-height: 596px;
-  margin: 0 auto;
-  margin-bottom: 20px;
   padding: 0 20px;
+  min-height: 480px;
+  margin: 0 auto;
 
   background-color: #65a93c;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -14,28 +13,38 @@
 }
 
 .intro__text {
+  padding-top: 1px;
   color: #ffffff;
 }
 
 .intro__title {
   margin: 0;
+  margin-top: 25px;
   margin-bottom: 25px;
 
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-align: center;
 }
 
 .intro__slogan {
   margin: 0;
+  margin-bottom: 30px;
 
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.intro_img {
+  margin-bottom: 25px;
 }
 
 .intro__btn {
   width: 280px;
+
   background-color: #68b738;
 
   &:hover,
@@ -46,15 +55,50 @@
 
 @media (min-width: @tablet-width) {
   .intro {
+    position: relative;
     width: 708px;
+    min-height: 800px;
     padding: 0 30px;
+    padding-left: 120px;
 
     background-color: #ffffff;
     background-image: none;
+
+    border: 1px solid red;
   }
 
   .intro__text {
     color: #111111;
+  }
+
+  .intro__title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .intro__slogan {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .intro_img {
+    position: absolute;
+    left: 250px;
+  }
+
+  .intro__btn {
+    position: absolute;
+    top: 260px;
+
+    width: 250px;
   }
 }
 
