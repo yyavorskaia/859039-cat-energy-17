@@ -1,4 +1,8 @@
 .intro {
+  min-height: 480px;
+}
+
+.intro__wrapper {
   position: relative;
 
   width: 280px;
@@ -6,20 +10,28 @@
   min-height: 480px;
   margin: 0 auto;
 
-  background-color: #65a93c;
+  background: linear-gradient(to bottom, #65a93c 0, #65a93c 305px, #ffffff 305px, #ffffff 100%);
+
   background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.intro__img {
+  min-height: 271px;
+
+  background-image: url("../img/index-can-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
 .intro__text {
-  padding-top: 1px;
   color: #ffffff;
 }
 
 .intro__title {
   margin: 0;
-  margin-top: 25px;
+  padding-top: 25px;
   margin-bottom: 25px;
 
   font-size: 36px;
@@ -54,26 +66,24 @@
 }
 
 @media (min-width: @tablet-width) {
-  .intro {
-    position: relative;
+  .intro__wrapper {
     width: 708px;
     min-height: 800px;
     padding: 0 30px;
-    padding-left: 120px;
 
     background-color: #ffffff;
     background-image: none;
-
-    border: 1px solid red;
   }
 
   .intro__text {
+    margin-left: 90px;
     color: #111111;
   }
 
   .intro__title {
-    margin-top: 40px;
+    margin: 0;
     margin-bottom: 40px;
+    padding: 0;
 
     font-size: 60px;
     line-height: 60px;
@@ -89,31 +99,46 @@
     text-align: left;
   }
 
-  .intro_img {
-    position: absolute;
-    left: 250px;
+  .intro__img {
+    min-height: 609px;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center 0;
   }
 
   .intro__btn {
     position: absolute;
-    top: 260px;
+    top: 220px;
+    left: 120px;
 
     width: 250px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .intro {
+  .intro__wrapper {
+    position: relative;
+
     width: 1220px;
+    min-height: 476px;
     padding: 0 40px;
   }
 
-  .intro_img {
+  .intro__text {
+    margin-left: 80px;
+  }
+
+  .intro__img {
     position: absolute;
+    top: -40px;
+    left: 500px;
+    z-index: 1;
     width: 552px;
-    height: 499px;
-    top: 10%;
-    right: 20%;
-    z-index: 2;
+    min-height: 499px;
+
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
   }
 }
