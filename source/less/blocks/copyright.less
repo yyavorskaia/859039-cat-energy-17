@@ -5,7 +5,7 @@
   line-height: 16px;
   color: #808080;
 
-  display: flex;
+  display: block;
 }
 
 .copyright__link-logo {
@@ -15,6 +15,13 @@
 
 @media (min-width: @tablet-width) {
   .copyright__link {
-    padding: 30px 0 30px 30px;
+    padding: 0;
+  }
+
+  .copyright__link-logo {
+    width: 30px;
+    height: 40px;
+
+    padding: 0;
   }
 }

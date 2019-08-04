@@ -19,10 +19,16 @@
   width: 280px;
   min-height: 66px;
   padding-top: 10px;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid #e6e6e6;
 }
 
 .catalog-page .page-header {
   margin-bottom: 0;
+}
+
+.catalog-page .page-header__wrapper {
+  margin-bottom: 70px;
 }
 
 @media (min-width: @tablet-width) {
@@ -42,7 +48,8 @@
   .page-header__logo {
     width: 190px;
     height: 65px;
-    padding-top: 25px;
+    padding-top: 35px;
+    border: none;
   }
 }
 
@@ -71,12 +78,13 @@
   .page-header__wrapper {
     width: 1220px;
     padding: 0 40px;
+    padding-top: 30px;
     margin-bottom: 90px;
   }
 
   .page-header__logo {
-    width: 220px;
-    height: 90px;
+    width: 200px;
+    height: 66px;
     padding-top: 40px;
   }
 
