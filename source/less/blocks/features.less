@@ -23,17 +23,11 @@
   width: 280px;
   min-height: 60px;
   margin-bottom: 20px;
-}
-
-.features__item--leaf,
-.features__item--drink,
-.features__item--eating,
-.features__item--clock {
   position: relative;
 }
 
 .features__item--leaf::before {
-  content: url("../img/advantage-leaf@1x.png");
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -41,11 +35,17 @@
   width: 60px;
   height: 60px;
 
+  background: url("../img/advantage-leaf@1x.png") no-repeat;
   background-color: #68b738;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-leaf@2x.png") no-repeat;
+  }
 }
 
 .features__item--drink::before {
-  content: url("../img/advantage-powder@1x.png");
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -53,11 +53,17 @@
   width: 60px;
   height: 60px;
 
+  background: url("../img/advantage-powder@1x.png") no-repeat;
   background-color: #68b738;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-powder@2x.png") no-repeat;
+  }
 }
 
 .features__item--eating::before {
-  content: url("../img/advantage-dining@1x.png");
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -65,11 +71,17 @@
   width: 60px;
   height: 60px;
 
+  background: url("../img/advantage-dining@1x.png") no-repeat;
   background-color: #68b738;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-dining@2x.png") no-repeat;
+  }
 }
 
 .features__item--clock::before {
-  content: url("../img/advantage-clock@1x.png");
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -77,7 +89,13 @@
   width: 60px;
   height: 60px;
 
+  background: url("../img/advantage-clock@1x.png") no-repeat;
   background-color: #68b738;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/advantage-clock@2x.png") no-repeat;
+  }
 }
 
 .features__text {
@@ -118,8 +136,6 @@
     margin-right: 60px;
     margin-bottom: 67px;
 
-    background-color: #f2f2f2;
-
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -135,6 +151,35 @@
   .features__item--clock::before {
     width: 80px;
     height: 80px;
+  }
+
+  .features__item--leaf::after,
+  .features__item--drink::after,
+  .features__item--eating::after,
+  .features__item--clock::after {
+    content: "1";
+    position: absolute;
+    z-index: -1;
+    left: 120px;
+    width: 70px;
+    height: 230px;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    font-size: 281px;
+    line-height: 281px;
+    color: #f2f2f2;
+  }
+
+  .features__item--drink::after {
+    content: "2";
+  }
+
+
+  .features__item--eating::after {
+    content: "3";
+  }
+
+  .features__item--clock::after {
+    content: "4";
   }
 
   .features__text {
