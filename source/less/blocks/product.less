@@ -1,5 +1,6 @@
 .product__title {
   margin: 0;
+  padding: 0;
   margin-bottom: 12px;
 
   font-weight: 400;
@@ -7,6 +8,12 @@
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+}
+
+.product__image {
+  display: block;
+  width: 140px;
+  height: 144px;
 }
 
 .product__info {
@@ -19,6 +26,11 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
+}
+
+.product__details-name,
+.product__details-description {
+  padding: 0;
 }
 
 .product__details-first {
@@ -40,16 +52,15 @@
   background-color: #f2f2f2;
 }
 
-.product__icon {
-  width: 35px;
-  height: 35px;
-  margin: 0 auto;
+.product__show-all-icon {
+  width: 30px;
+  height: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #f2f2f2;
 }
 
 .product__amount {
+  display: block;
   margin: 0;
   margin-bottom: 12px;
 
@@ -77,6 +88,20 @@
     text-align: center;
   }
 
+  .product__info {
+    width: 255px;
+    padding: 0;
+    margin: 0 0 32px;
+  }
+
+  .product__image {
+    position: absolute;
+    bottom: 310px;
+    left: 0;
+    width: 324px;
+    height: auto;
+  }
+
   .product__details {
     width: 260px;
 
@@ -99,41 +124,36 @@
     border-bottom: none;
   }
 
-  .product__info {
-    width: 255px;
-    padding: 0;
-    margin: 0 0 32px;
-  }
-
   .product_btn {
     width: 250px;
-    margin-bottom: 0;
     padding: 10px 0;
 
     font-size: 16px;
     line-height: 20px;
   }
 
-  .product__icon {
+  .product__show-all-icon {
     width: 60px;
     height: 60px;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 0;
+    margin-bottom: 50px;
   }
 
   .product__amount {
-    width: 170px;
-    margin-bottom: 0;
+    width: 140px;
+    margin-bottom: 26px;
 
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+    text-align: center;
   }
 
   .product__taste {
     display: block;
     width: 170px;
     margin: 0;
+    margin-bottom: 87px;
 
     font-family: "Arial", sans-serif;
     font-size: 16px;
@@ -143,6 +163,7 @@
 
   .product_button-show {
     width: 250px;
+    margin-bottom: 0;
     padding: 10px 0;
 
     font-size: 16px;
@@ -151,8 +172,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .product__image {
+    width: 245px;
+    height: auto;
+  }
+
   .product__info {
-    width: 170px;
+    width: 175px;
     padding: 0;
     margin: 0 0 32px;
   }
@@ -166,6 +192,10 @@
   }
 
   .product_btn {
+    width: 170px;
+  }
+
+  .product_button-show {
     width: 170px;
   }
 
