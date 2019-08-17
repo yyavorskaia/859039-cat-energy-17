@@ -1,0 +1,255 @@
+.example {
+  border-top: 0.5px solid transparent;
+  border-bottom: 0.5px solid transparent;
+
+  background-color: #f2f2f2;
+}
+
+.example__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.example__title {
+  margin: 0;
+  margin-top: 18px;
+  margin-bottom: 22px;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #111111;
+}
+
+.example__description {
+  width: 270px;
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #111111;
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 280px;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.example__item {
+  position: relative;
+
+  width: 124px;
+  min-height: 55px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+}
+
+.example__figures {
+  position: absolute;
+  top: 15px;
+  left: 17px;
+
+  width: 86px;
+  margin: 0;
+
+  background-color: #f2f2f2;
+}
+
+.example__value {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__text {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+}
+
+.example__expenses,
+.example__price {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__expenses {
+  margin: 0;
+  margin-bottom: 40px;
+
+  text-align: center;
+}
+
+.example__picture {
+  display: block;
+  width: 320px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: #ffffff;
+    background-image: linear-gradient(#ffffff 0%, #ffffff 50%, #f2f2f2 50%, #f2f2f2 100%);
+  }
+
+  .example__wrapper {
+    width: 708px;
+    padding: 0 30px;
+    padding-bottom: 70px;
+  }
+
+  .example__title {
+    padding-top: 42px;
+    margin-top: 0;
+    margin-bottom: 65px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    width: 700px;
+    margin-bottom: 52px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__list {
+    width: 365px;
+    margin: 0;
+  }
+
+  .example__item {
+    width: 160px;
+
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+  }
+
+  .example__figures {
+    top: 10px;
+    left: 10px;
+
+    width: 140px;
+    margin: 0;
+
+    background-color: #ffffff;
+  }
+
+  .example__value {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 37px;
+  }
+
+  .example__text {
+    width: 130px;
+
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  .example__expenses-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    width: 708px;
+  }
+
+  .example__expenses {
+    width: 192px;
+    margin: 0 0 0 auto;
+    padding-top: 8px;
+
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+  }
+
+  .example__price {
+    font-size: 20px;
+    text-align: right;
+    line-height: 29px;
+  }
+
+  .example__picture {
+    width: 690px;
+    height: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-color: #ffffff;
+    background-image: linear-gradient(#ffffff 0%, #ffffff 30%, #f2f2f2 30%, #f2f2f2 100%);
+  }
+
+  .example__wrapper {
+    display: flex;
+
+    width: 1220px;
+    padding: 0 40px;
+    padding-bottom: 30px;
+  }
+
+  .example__title {
+    padding-top: 50px;
+    margin-bottom: 145px;
+  }
+
+  .example__description {
+    width: 445px;
+    margin-bottom: 65px;
+  }
+
+  .example__expenses-wrapper {
+    flex-direction: column;
+
+    width: 370px;
+    min-height: 160px;
+  }
+
+  .example__expenses {
+    width: 370px;
+
+    text-align: left;
+  }
+
+  .example__price {
+    margin-left: 65px;
+  }
+
+  .example__figures {
+    background-color: #f2f2f2;
+  }
+}
