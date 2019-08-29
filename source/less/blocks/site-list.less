@@ -1,17 +1,28 @@
-.site-list__item {
-  text-align: center;
-  border-bottom: 0.5px solid #e6e6e6;
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
+.site-list__item {
+  min-height: 66px;
+}
+
 
 .site-list__link {
   display: block;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 
   font-size: 20px;
-  line-height: 24px;
+  line-height: 20px;
+  font-weight: 500;
   color: #111111;
+  white-space: nowrap;
+  text-align: center;
   text-transform: uppercase;
+
+  border-top: 1px solid #e6e6e6;
 
   &:hover,
   &:focus {
@@ -20,11 +31,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .site-list__item {
-    border: none;
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  .site-list__item:first-child {
+  .site-list__item {
     border: none;
   }
 
@@ -33,10 +46,13 @@
   }
 
   .site-list__link {
-    padding: 40px 0 10px 0;
+    padding: 41px 0 10px 0; /*сравнить с десктопом*/
 
     font-size: 18px;
     line-height: 24.6px;
+    font-weight: 400;
+
+    border: none;
 
     &:hover,
     &:focus {
@@ -51,7 +67,7 @@
 
 @media (min-width: @desktop-width) {
   .site-list__link {
-    padding: 40px 0 10px 0;
+    padding: 40px 0 11px 0;
 
     font-size: 20px;
     line-height: 24.6px;
