@@ -4,8 +4,8 @@
 
   width: 193px;
   margin: 0 auto;
-  margin-bottom: 35px;
   padding: 0;
+  padding-bottom: 40px;
 
   list-style: none;
 }
@@ -37,11 +37,12 @@
 }
 
 .button-list__point {
-  position: absolute;
+  position: relative;
+  z-index: 2;
   left: 3px;
   top: 3px;
 
-  display: block;
+
   width: 35px;
   height: 6px;
 
@@ -60,6 +61,8 @@
     padding-bottom: 6px;
 
     font-size: 20px;
+
+    border-bottom: 1px dotted #bebebe;
   }
 
   .button-list__range {
@@ -72,26 +75,32 @@
   }
 
   .button-list__point {
-    z-index: 2;
-    left: 50%;
-    top: 0;
+    z-index: 1;
+    left: 49%;
+    top: -2px;
     width: 8px;
     height: 8px;
 
     border-radius: 50%;
   }
 
-  .button-list__point::before {
-    content: "";
+  .button-list__stroke {
     position: absolute;
-    z-index: 1;
-    top: -14px;
-    left: -14px;
+    left: 46%;
+    top: -16px;
 
     width: 34px;
     height: 34px;
 
+    background-color: #ffffff;
     border-radius: 50%;
     border: 1px solid #cdcdcd;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button-list {
+    margin-left: 40px;
+    padding: 0;
   }
 }

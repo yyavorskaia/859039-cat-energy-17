@@ -1,5 +1,7 @@
 .more-product {
   position: relative;
+
+  margin-bottom: 35px;
 }
 
 .more-product__wrapper {
@@ -9,16 +11,30 @@
 }
 
 .more-product__title {
-  padding: 32px 0 32px 0;
+  position: relative;
+
+  width: 230px;
+  padding: 0;
   margin: 0;
+  margin-bottom: 33px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: #111111;
+}
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.more-product__title::after {
+  content: " ";
+  position: absolute;
+  width: 54px;
+  height: 3px;
+
+  top: 12px;
+  right: -70px;
+
+  background-color: #68b738;
 }
 
 .more-product__list {
@@ -29,11 +45,10 @@
 
 .more-product__item {
   width: 280px;
-  min-height: 128px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -48,11 +63,6 @@
   text-transform: uppercase;
 }
 
-.more-product__info {
-  display: flex;
-  justify-content: space-between;
-}
-
 .more-product__count,
 .more-product__price {
   margin: 0;
@@ -63,9 +73,18 @@
   color: #444444;
 }
 
+.more-product__price {
+  margin-left: auto;
+}
+
 .more-product__btn {
   width: 280px;
   margin: 15px 0 17px;
+  padding: 10px 0 10px 0;
+
+  font-size: 16px;
+  line-height: 20px;
+
   background-color: #68b738;
 }
 
@@ -119,14 +138,36 @@
 
   .more-product__title {
     position: relative;
+    width: 340px;
 
     margin: 0;
-    margin-bottom: 70px;
-    padding: 0 30px 0 35px;
+    margin-bottom: 80px;
+    padding: 0 35px;
     font-size: 36px;
     line-height: 36px;
 
     border-bottom: none;
+  }
+
+  .more-product__title::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    top: 23px;
+    left: -30px;
+
+    height: 3px;
+    background-color: #68b738;
+  }
+
+  .more-product__title::after {
+    content: " ";
+    position: absolute;
+    width: 455px;
+    top: 23px;
+    right: -455px;
+    height: 3px;
+    background-color: #68b738;
   }
 
   .more-product__list {
@@ -134,13 +175,10 @@
   }
 
   .more-product__item {
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: baseline;
-    flex-wrap: wrap;
 
     width: 708px;
-    min-height: 140px;
     padding: 0 36px;
 
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -148,8 +186,8 @@
 
   .more-product__name {
     width: 170px;
-    margin-bottom: 25px;
     margin-top: 25px;
+    margin-bottom: 20px;
 
     font-size: 20px;
     line-height: 20px;
@@ -165,14 +203,18 @@
     text-align: right;
   }
 
-  .more-product__info {
-    width: 230px;
+  .more-product__price {
+    margin-left: 53px;
+  }
+
+  .more-product__count {
+    margin-left: auto;
   }
 
   .more-product__btn {
     width: 634px;
     margin-top: 0;
-    margin-bottom: 27px;
+    margin-bottom: 31px;
 
     font-size: 16px;
     line-height: 20px;
@@ -182,10 +224,10 @@
 
   .more-product__present {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 708px;
     min-height: 200px;
-    padding: 55px 120px 65px 90px;
+    padding: 70px 120px 65px 90px;
 
     background-color: #68b738;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
@@ -201,6 +243,8 @@
 
   .more-product__icon {
     margin: 0;
+    margin-top: -7px;
+    margin-right: 275px;
 
     text-align: left;
   }
@@ -222,9 +266,61 @@
     padding: 0 40px;
   }
 
+  .more-product__title {
+    margin-bottom: 77px;
+    padding: 0;
+  }
+
+  .more-product__title::before {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    top: 24px;
+    left: -110px;
+
+    height: 3px;
+    background-color: #68b738;
+  }
+
+  .more-product__title::after {
+    content: " ";
+    position: absolute;
+    width: 960px;
+    top: 24px;
+    right: -1000px;
+    height: 3px;
+    background-color: #68b738;
+  }
+
+  .more-product__list {
+    margin-bottom: 0;
+  }
+
   .more-product__item {
+    align-items: baseline;
+
     width: 895px;
-    min-height: 70px;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .more-product__name {
+    width: 247px;
+    margin: 29px 80px 21px 0;
+  }
+
+  .more-product__count {
+    text-align: left;
+    width: 245px;
+    margin-left: 0;
+  }
+
+  .more-product__price {
+    width: 50px;
+    margin-left: 0;
+
+    text-align: left;
   }
 
   .more-product__btn {
@@ -236,6 +332,7 @@
     display: block;
     width: 245px;
     min-height: 290px;
+    margin-top: 8px;
     padding: 0;
     padding-top: 65px;
     box-sizing: border-box;
