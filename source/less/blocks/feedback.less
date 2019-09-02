@@ -77,13 +77,13 @@
 .feedback__list {
   padding: 0;
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   list-style: none;
 }
 
 .feedback__list--contacts {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .feedback__item {
@@ -223,6 +223,25 @@
   background-position: 0 0;
 }
 
+.feedback__label--checkbox:focus::before,
+.feedback__label--checkbox:hover::before,
+.feedback__label--radio:focus::before,
+.feedback__label--radio:hover::before {
+  border: 1px solid #bababa;
+}
+
+.feedback__label--checkbox:active::after,
+.feedback__label--checkbox:active::before,
+.feedback__label--radio:active::after,
+.feedback__label--radio:active::before {
+  opacity: 0.3;
+}
+
+.feedback__input-checkbox:focus + label::before,
+.feedback__input-radio:focus + label::before {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
 .feedback__input-text,
 .feedback__label,
 .feedback__textarea {
@@ -235,7 +254,23 @@
 
 .feedback__input-text,
 .feedback__textarea {
+  outline: thin;
+
   border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active,
+  &:focus {
+    outline: thin;
+    border: 2px solid #444444;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
 }
 
 .feedback__required {
@@ -249,18 +284,33 @@
   text-align: center;
 }
 
-.feedback__input-text--email + svg {
+.feedback__input-text--email + .feedback__input-icon {
   position: absolute;
   right: 15px;
   top: 13px;
-  fill: #404040;
 }
 
-.feedback__input-text--phone + svg {
+.feedback__input-text--phone + .feedback__input-icon {
   position: absolute;
   right: 13px;
   top: 11px;
-  fill: #404040;
+}
+
+.feedback__input-icon {
+  fill: #222222;
+
+  &:active,
+  &:focus {
+    fill: #68b738;
+  }
+}
+
+.feedback__list--contacts .feedback__input-text:invalid + .feedback__input-icon {
+  fill: #ff8282;
+}
+
+.feedback__list--contacts .feedback__input-text:active + .feedback__input-icon {
+  fill: #68b738;
 }
 
 @media (min-width: @tablet-width) {
@@ -313,7 +363,7 @@
   }
 
   .feedback__item:last-child {
-    margin-bottom: 70px;
+    margin-bottom: 67px;
   }
 
   .feedback__input-text {
@@ -371,7 +421,7 @@
   .feedback__title--master {
     width: auto;
 
-    margin-bottom: 75px;
+    margin-bottom: 72px;
     padding-left: 40px;
 
     font-size: 36px;
@@ -400,7 +450,7 @@
   }
 
   .feedback__list--contacts {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     padding: 0 40px 0 40px;
   }
 

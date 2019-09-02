@@ -6,7 +6,12 @@
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
-  color: #808080;
+  color: #444444;
+
+  &:active,
+  &:focus {
+    color: #c8c8c8;
+  }
 }
 
 .copyright__link-logo {
@@ -19,7 +24,16 @@
   padding: 0;
   width: 28;
   height: 35;
-  fill: #737373;
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active,
+  &:focus {
+    fill: #c8e0ba;
+  }
 }
 
 @media (min-width: @tablet-width) {

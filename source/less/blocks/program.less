@@ -105,6 +105,25 @@
   background: url("../img/icon-right-arrow-long.svg") no-repeat;
 }
 
+.program__link:hover::after {
+  width: 32px;
+  height: 12px;
+  background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+}
+
+.program__link:active,
+.program__link:focus {
+  color: #c5c6c6;
+}
+
+.program__link:active::after,
+.program__link:focus::after {
+  width: 32px;
+  height: 12px;
+  background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .program__wrapper {
     width: 708px;
@@ -201,7 +220,7 @@
     content: "";
     position: absolute;
     top: 6px;
-    left: 130px;
+    left: 128px;
 
     width: 24px;
     height: 12px;
